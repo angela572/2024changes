@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header-image {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #ff5722;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        h2, h3 {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .section-title {
+            color: #343a40;
+            font-weight: bold;
+            margin-top: 30px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .phone-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: green;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .form-control {
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        .btn {
+            border-radius: 8px;
+            padding: 10px 10px;
+            width: 50%;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-success {
+            background-color: #28a745;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+        .success-message {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #28a745;
+            color: #ffffff;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+
+        .telegram-button {
+            background-color: #0088cc;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .telegram-button:hover {
+            background-color: #007ab8;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-4">
+        <!-- Header Section -->
+        <div class="text-center">
+            <img src="images.png" alt="KNEC Logo" class="header-image">
+            <h1>Students Grades 2024</h1>
+        </div>
+
+        <!-- Introduction Section -->
+        <h2 class="section-title">Hello And Welcome</h2>
+        <p>Welcome to the Student Grade Changing. Here, you can Change your Grades securely and efficiently.</p>
+
+        <!-- Charges and Instructions Section -->
+        <h2 class="section-title"> Services</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Charges Per Subject (PAYMENT SHOULD BE DONE HERE:0107853480)</h3>
+                <ul>
+                    <li>We Do Not Change Subjects Grade to Grade A.</li>
+                    <li>2000 per subject for grades B+ and A-.</li>
+                    <li>1000 per subject for grades B and B-.</li>
+                    <li>500 per subject for grades c+ </li>
+                    <li>300 per subject for grades C and C-.</li>
+                    <li>200 per subject for grades D+</li>
+                    <li>1000 per subject worth 2000 if you pay for more than 3 subjects.</li>
+                    <li>500 per subject worth 1000 if you pay for more than 3 subjects.</li>
+                    <li>250 per subject worth 2000 if you pay for more than 3 subjects.</li>
+                    <li>150 per subject worth 300 if you pay for more than 3 subjects.</li>
+                    <li>100 per subject worth 200 if you pay for more than 3 subjects.</li>
+                    <li>Each Time You Refer To A Friend You Will Get One Subject Worth 2000 For Free!</li>
+                    
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3>Payment Instructions</h3>
+                <ul>
+                    <li>Submit your payment screenshot after completing your transaction.</li>
+                    <li>Ensure That If You refer To  Person  include both usernames that is: 1.your username 2.The personal you  reffered to username(e.g., @Mary/John).</li>
+                    <li>Verify your index number and personal information before submission.</li>
+                    <li>If You Do Not Send your Payment Screenshot Your Grades Will Not Be Changed.</li>
+                    <li>Payments should be made to: <strong>0107853480</strong>.</li>
+                    <li>We adjust subject grades only; mean grades are computed by Grade Calculation Softwares.</li>
+                    <li>If You Come Across Any Problem Message Me Am Online Through the Link Below The Page</strong>.</li>
+                    <li>Make Sure You Visit The Website Site Every Sunday For Weekly  Offers .</li>
+                    <li>If Of Fake Transactions You will Suffer On your Own As The Team Will Take Action </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Marks Entry Section -->
+        <h2 class="section-title text-center">Enter Your Grades Paid For</h2>
+        <form id="marksForm" action="#" method="POST">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>English</td><td><input type="text" name="marks_english" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Mathematics</td><td><input type="text" name="marks_mathematics" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Home Science</td><td><input type="text" name="marks_homescience" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Biology</td><td><input type="number/text" name="marks_biology" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Chemistry</td><td><input type="text" name="marks_chemistry" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Physics</td><td><input type="text" name="marks_physics" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Social Sciences</td><td><input type="text" name="marks_socialsciences" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>History/Govermenttd><td><input type="text" name="marks_history" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Computer</td><td><input type="text" name="marks_government" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>CRE</td><td><input type="text" name="marks_cre" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Bulding and <br> constraction</td><td><input type="text" name="marks_Bulding and constraction" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>French</td><td><input type="text" name="marks_French" class="form-control" min="0" max="100"></td></tr>
+                        <tr><td>Geography</td><td><input type="text" name="marks_geography" class="form-control" min="0" max="100"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center my-3">
+                
+            </div>
+        </form>
+
+        <!-- Submit Work Section -->
+        <h2 class="section-title text-center text-primary">The Following Data Is Required</h2>
+        <form id="submitForm" enctype="multipart/form-data" class="bg-dark text-light p-4 rounded">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Enter Your Name</label>
+                <input type="text" class="form-control" id="username" placeholder="Fill In All Your Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="county" class="form-label">School County</label>
+                <input type="county" class="form-control" id="county" placeholder="Enter Your School County" required>
+            </div>
+            <div class="mb-3">
+                <label for="school" class="form-label">School Name</label>
+                <input type="text" class="form-control" id="school" placeholder="Enter your school name" required>
+            </div>
+            <div class="mb-3">
+                <label for="index_number" class="form-label">Index Number</label>
+                <input type="text" class="form-control" id="index_number" placeholder="Enter your index number" required>
+            </div>
+            <div class="mb-3">
+                <label for="subjects" class="form-label">Subjects paid for</label>
+                <input type="text" class="form-control" id="subjects" placeholder="Enter Subjects paid for" required>
+                <div class="mb-3">
+                    <label for="text" class="form-label">Mpesa</label>
+                    <input type="text" class="form-control" id="text" placeholder="Name Of Your Mpesa" required>
+                </div>
+           
+           
+                <div class="mb-3">
+                <label for="file" class="form-label max-4">Upload Your Screenshot of payment</label>
+                <input type="file" class="form-control" id="file" required>
+            </div>
+
+
+           
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('marksForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Marks submitted successfully!');
+        });
+        document.getElementById('submitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Work submitted successfully!');
+        });
+    </script>
+
+    <div class="container text-center my-5">
+        <h1>Contact Us on Telegram</h1>
+        <p>Click the button below to chat with us on Telegram!</p>
+        <a href="https://t.me/@muthuri" target="_blank">
+            <button class="telegram-button">Chat on Telegram</button>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        </a>
+    </div>
+</body>
+</html>
